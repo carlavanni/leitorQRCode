@@ -63,7 +63,7 @@ this.qrScanner.prepare()
        this.qrScanner.show();
 
        // start scanning
-       let leitorQRCode = this.qrScanner.scan().subscribe(async(text: string) => {
+       this.leitorQRCode = this.qrScanner.scan().subscribe(async(text: string) => {
         this.leitura = (text['result']) ? text['result'] : text;
 
          this.content.style.opacity= '1';
